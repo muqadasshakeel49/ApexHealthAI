@@ -214,7 +214,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ---
 
 ## Demo Walkthrough
-1. **Login**: Navigate to `http://localhost:3000/login`. Click **Auto-fill Demo Credentials** (`demo@example.com` / `Password123!`) and sign in.
+1. **Sign Up**: Navigate to the signup page and create an account by entering your email and password.
 2. **Dashboard**: View your appointment statistics and upcoming appointments.
 3. **Conversational Booking**:
    - Click **Book with AI**.
