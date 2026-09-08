@@ -91,13 +91,13 @@ export default function DashboardPage() {
   const upcomingAppointments = confirmedAppointments.slice(0, 4);
 
   return (
-    <div className="flex min-h-screen bg-slate-50">
+    <div className="flex min-h-screen flex-col md:flex-row bg-slate-50">
       <Sidebar />
 
       <div className="flex-1 flex flex-col min-w-0">
         <Navbar onOpenBookModal={() => setIsBookModalOpen(true)} />
 
-        <main className="flex-1 p-8 max-w-7xl w-full mx-auto space-y-8">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto space-y-6 lg:space-y-8">
           {/* Welcome Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
@@ -109,7 +109,7 @@ export default function DashboardPage() {
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex w-full sm:w-auto flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
               <Button
                 variant="outline"
                 onClick={() => setIsBookModalOpen(true)}
@@ -300,7 +300,7 @@ export default function DashboardPage() {
         description="Have a natural conversation to schedule your appointment."
         maxWidth="lg"
       >
-        <div className="h-[480px]">
+        <div className="h-[min(480px,calc(100dvh-10rem))] min-h-[300px]">
           <ChatPanel
             onAppointmentBooked={() => {
               fetchAppointments();

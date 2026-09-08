@@ -42,14 +42,14 @@ export const Modal: React.FC<ModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-3 sm:p-4 bg-slate-900/50 backdrop-blur-sm animate-in fade-in duration-150">
       <div
-        className={`w-full ${widthClasses[maxWidth]} bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transform transition-all animate-in zoom-in-95 duration-150`}
+        className={`w-full ${widthClasses[maxWidth]} max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-2rem)] flex flex-col bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transform transition-all animate-in zoom-in-95 duration-150`}
         role="dialog"
         aria-modal="true"
       >
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
-          <div>
+          <div className="min-w-0 pr-3">
             <h3 className="text-base font-semibold text-slate-900">{title}</h3>
             {description && (
               <p className="text-xs text-slate-500 mt-0.5">{description}</p>
@@ -62,7 +62,7 @@ export const Modal: React.FC<ModalProps> = ({
             <X className="w-5 h-5" />
           </button>
         </div>
-        <div className="p-6">{children}</div>
+        <div className="p-4 sm:p-6 overflow-y-auto">{children}</div>
       </div>
     </div>
   );

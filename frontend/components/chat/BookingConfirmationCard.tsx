@@ -61,7 +61,7 @@ export const BookingConfirmationCard: React.FC<BookingConfirmationCardProps> = (
 
   return (
     <div className="mt-3 p-4 rounded-xl bg-gradient-to-br from-indigo-50/80 to-white border border-indigo-200/90 shadow-sm space-y-3">
-      <div className="flex items-center justify-between border-b border-indigo-100 pb-2">
+      <div className="flex flex-wrap items-start justify-between gap-2 border-b border-indigo-100 pb-2">
         <span className="text-xs font-bold text-indigo-900 uppercase tracking-wider">
           Appointment Proposal
         </span>
@@ -73,18 +73,18 @@ export const BookingConfirmationCard: React.FC<BookingConfirmationCardProps> = (
       <div className="grid grid-cols-2 gap-2 text-xs">
         <div className="col-span-2">
           <span className="text-slate-400 block text-[10px] uppercase font-semibold">Service</span>
-          <span className="font-semibold text-slate-800">{appointment.service || 'Not specified'}</span>
+          <span className="font-semibold text-slate-800 break-words">{appointment.service || 'Not specified'}</span>
         </div>
         <div>
           <span className="text-slate-400 block text-[10px] uppercase font-semibold">Date</span>
-          <span className="font-semibold text-slate-800 flex items-center gap-1 mt-0.5">
+          <span className="font-semibold text-slate-800 flex items-center gap-1 mt-0.5 break-words">
             <Calendar className="w-3 h-3 text-indigo-500" />
             {appointment.date || 'Not specified'}
           </span>
         </div>
         <div>
           <span className="text-slate-400 block text-[10px] uppercase font-semibold">Time</span>
-          <span className="font-semibold text-slate-800 flex items-center gap-1 mt-0.5">
+          <span className="font-semibold text-slate-800 flex items-center gap-1 mt-0.5 break-words">
             <Clock className="w-3 h-3 text-indigo-500" />
             {appointment.time || 'Not specified'}
           </span>

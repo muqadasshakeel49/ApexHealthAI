@@ -36,7 +36,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   };
 
   return (
-    <div className="p-4 bg-white border-t border-slate-200 space-y-3">
+    <div className="p-3 sm:p-4 bg-white border-t border-slate-200 space-y-3">
       {/* Suggestion Chips */}
       <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar">
         <span className="text-slate-400 font-medium flex items-center gap-1 shrink-0 text-[11px]">
@@ -57,7 +57,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       </div>
 
       {/* Composer Input */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 min-w-0">
         <input
           type="text"
           value={content}
@@ -69,7 +69,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               ? 'AI Assistant is thinking...'
               : 'Type your appointment request (e.g. "Dentist tomorrow afternoon")...'
           }
-          className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 disabled:bg-slate-50 disabled:text-slate-400 transition-colors"
+          className="min-w-0 flex-1 rounded-xl border border-slate-300 bg-white px-3 sm:px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 disabled:bg-slate-50 disabled:text-slate-400 transition-colors"
         />
         <Button
           variant="primary"

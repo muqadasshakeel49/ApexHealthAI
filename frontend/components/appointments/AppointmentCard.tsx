@@ -41,9 +41,9 @@ export const AppointmentCard: React.FC<AppointmentCardProps> = ({
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm hover:shadow-md transition-shadow">
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <div>
-          <h4 className="font-semibold text-slate-900 text-base">
+      <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+        <div className="min-w-0 flex-1">
+          <h4 className="font-semibold text-slate-900 text-base break-words">
             {appointment.service}
           </h4>
           <p className="text-xs text-slate-400 mt-0.5">
@@ -75,8 +75,8 @@ export const AppointmentCard: React.FC<AppointmentCardProps> = ({
       {isCancellable && onStatusChange && (
         <div className="mt-4 pt-1 flex justify-end">
           {showConfirmCancel ? (
-            <div className="flex items-center gap-2 bg-rose-50 p-2 rounded-xl border border-rose-200 text-xs">
-              <span className="text-rose-700 font-medium">Cancel appointment?</span>
+            <div className="flex flex-wrap items-center justify-end gap-2 bg-rose-50 p-2 rounded-xl border border-rose-200 text-xs">
+              <span className="text-rose-700 font-medium mr-auto">Cancel appointment?</span>
               <Button
                 size="sm"
                 variant="danger"

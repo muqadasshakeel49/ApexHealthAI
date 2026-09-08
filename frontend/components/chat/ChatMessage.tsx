@@ -38,7 +38,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       </div>
 
       {/* Bubble Container */}
-      <div className={`max-w-[85%] sm:max-w-[75%] space-y-1.5`}>
+      <div className={`min-w-0 max-w-[calc(100%-2.75rem)] sm:max-w-[75%] space-y-1.5`}>
         <div
           className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
             isUser
@@ -46,7 +46,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               : 'bg-white border border-slate-200/90 text-slate-800 rounded-tl-none shadow-sm'
           }`}
         >
-          <p className="whitespace-pre-wrap">{message.content}</p>
+          <p className="whitespace-pre-wrap break-words">{message.content}</p>
 
           {/* If ready to book, render inline confirmation card */}
           {!isUser && isReadyToBook && extracted && (
@@ -60,7 +60,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
         {/* Timestamp & Metadata Footer */}
         <div
-          className={`flex items-center gap-2 px-1 text-[10px] text-slate-400 ${
+          className={`flex flex-wrap items-center gap-x-2 gap-y-1 px-1 text-[10px] text-slate-400 ${
             isUser ? 'justify-end' : 'justify-start'
           }`}
         >

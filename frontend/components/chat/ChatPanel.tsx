@@ -140,30 +140,30 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
   return (
     <div className="flex flex-col h-full bg-slate-50 border border-slate-200/90 rounded-2xl shadow-sm overflow-hidden">
       {/* Panel Header */}
-      <div className="h-16 px-6 bg-white border-b border-slate-200 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-3">
+      <div className="min-h-16 px-4 sm:px-6 py-3 bg-white border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+        <div className="min-w-0 flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white flex items-center justify-center shadow-sm shadow-indigo-100">
             <Bot className="w-5 h-5" />
           </div>
-          <div>
-            <h3 className="font-bold text-slate-900 text-sm leading-tight">
+          <div className="min-w-0">
+            <h3 className="font-bold text-slate-900 text-sm leading-tight truncate">
               AI Appointment Assistant
             </h3>
-            <p className="text-[11px] text-slate-500 flex items-center gap-1">
+            <p className="text-[11px] text-slate-500 flex items-center gap-1 truncate">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               Natural language booking & slot extraction
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 ml-auto">
           {onOpenFallbackForm && (
             <Button
               size="sm"
               variant="outline"
               onClick={() => onOpenFallbackForm()}
               leftIcon={<CalendarPlus className="w-3.5 h-3.5 text-slate-500" />}
-              className="text-xs"
+              className="text-xs px-2 sm:px-3"
             >
               Manual Form
             </Button>
@@ -173,7 +173,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
             variant="ghost"
             onClick={handleCreateNewSession}
             leftIcon={<RefreshCw className="w-3.5 h-3.5 text-slate-500" />}
-            className="text-xs"
+            className="text-xs px-2 sm:px-3"
           >
             New Chat
           </Button>
@@ -181,7 +181,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
       </div>
 
       {/* Message List */}
-      <div className="flex-1 p-6 overflow-y-auto space-y-4">
+      <div className="flex-1 min-h-0 p-3 sm:p-6 overflow-y-auto space-y-4">
         {isLoadingSession ? (
           <div className="h-full flex items-center justify-center text-slate-400 text-xs gap-2">
             <Loader2 className="w-4 h-4 animate-spin text-indigo-600" />

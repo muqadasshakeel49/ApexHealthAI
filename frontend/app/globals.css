@@ -6,6 +6,11 @@
   body {
     @apply bg-slate-50 text-slate-900 antialiased font-sans;
   }
+
+  html,
+  body {
+    @apply min-w-0;
+  }
 }
 
 /* Custom scrollbar for modern SaaS feel */
