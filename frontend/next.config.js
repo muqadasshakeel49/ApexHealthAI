@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:5000/api/:path*'
+        destination: 'https://apex-health-ai-backend.vercel.app/api/:path*'
       }
     ];
   }
