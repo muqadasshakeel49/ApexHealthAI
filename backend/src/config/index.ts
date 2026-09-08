@@ -18,7 +18,7 @@ export const config = {
     model: process.env.MISTRAL_MODEL || 'mistral-small-latest'
   },
   database: {
-    url: process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_yKOaA9WvUJ1h@ep-summer-lab-ay7z4myh-pooler.c-5.us-east-2.aws.neon.tech/ai_appointments?sslmode=require&channel_binding=require'
+    url: process.env.DATABASE_URL || ''
   }
 };
 
